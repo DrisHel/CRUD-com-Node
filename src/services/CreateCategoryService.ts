@@ -1,5 +1,6 @@
 import { getRepository } from "typeorm";
-import { Category } from "./../entities/Category";
+import { Category } from "../entities/Category";
+
 
 
 type CategoryRequest = {
@@ -15,7 +16,7 @@ export class CreateCategoryService {
         return new Error ("Category already exists");
     }
 
-    const category = repo.create ({
+    const category = repo.create({
         name,
         description
 

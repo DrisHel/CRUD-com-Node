@@ -1,8 +1,10 @@
 import{Router} from "express";
 import { CreateCategoryController } from "./Controller/CreateCategoryController";
+import { GetAllCategoriesController } from "./Controller/GetAllCategoriesController";
 
-// criação da rota de categoria
+// category route file creation
 const routes = Router();
 routes.post("/categories",new CreateCategoryController().handle);
+routes.get("/categories",new GetAllCategoriesController().handle);
 
 export {routes};
