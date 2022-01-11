@@ -7,6 +7,6 @@ export class GetAllCategoriesController {
 
         const categories = await service.execute();
 
-        return response.json();
+        return response.json(categories);
     }
 }
